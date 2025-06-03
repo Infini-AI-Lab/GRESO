@@ -19,7 +19,7 @@ Fan Lai<sup>3</sup>, Jiawei Zhao<sup>4</sup>, Beidi Chen<sup>1</sup>
 
 <!-- ---------- -->
 **TL;DR**
-We propose GRESO, a lightweight pre-rollout filtering method that improves the efficiency of rollout scaling in LLM RL by predicting and skipping low-value prompts.
+We propose GRESO, a lightweight pre-rollout filtering method that improves the efficiency of *rollout scaling* in LLM RL by predicting and skipping low-value prompts.
 </div>
 
 
