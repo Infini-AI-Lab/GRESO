@@ -31,7 +31,7 @@ We propose GRESO, a lightweight pre-rollout filtering method that improves the e
 
 <!-- ---------- -->
 <p align="center">
-  <img src="static/scaling.jpg" alt="GRESO Overview" style="width:80%;"/>
+  <img src="static/scaling.jpg" alt="GRESO Overview" style="width:90%;"/>
 </p>
 
 <p align="center"><i>
