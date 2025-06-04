@@ -13,7 +13,7 @@ Fan Lai<sup>3</sup>, Jiawei Zhao<sup>4</sup>, Beidi Chen<sup>1</sup>
 <sup>4</sup>Meta AI
 
 <div align="center">
-[<a href="">Paper</a>] | [<a href="https://infini-ai-lab.github.io/GRESO/">Blog</a>]
+[<a href="https://arxiv.org/abs/2506.02177">Paper</a>] | [<a href="https://infini-ai-lab.github.io/GRESO/">Blog</a>]
 </div>
 <br>
 
