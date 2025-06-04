@@ -121,7 +121,6 @@ tests/e2e/toy_examples/deepspeed/synchronous/output.txt
 *.lock
 
 # data
-*.parquet
 
 
 # local logs
