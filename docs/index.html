@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts">
+  <meta property="og:title" content="GRESO"/>
+  <meta property="og:description" content="Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts"/>
+  <meta property="og:url" content="https://Infini-AI-Lab.github.io/GRESO/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/proj_fig.png" />
+  <meta property="og:image:width" contecdnt="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="GRESO">
+  <meta name="twitter:description" content="Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/proj_fig.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Speculative Decoding">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts</title>
+  <link rel="icon" type="image/x-icon" href="static/images/icon.jpg">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+</head>
+<body>
+
+  <section class="hero"  style="background-color: #FFFFFC !important;">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <!-- <h3 class="custom-font" style="display: inline;">*</h3> -->
+            <h1 class="title is-2 publication-title" style="display: inline;">Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts</h1>
+            <br><br>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="http://zhenghaizhong.com/" target="_blank">Haizhong Zheng</a><sup>1</sup>,</span>
+                <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=W6CZltIAAAAJ&hl=en" target="_blank">Yang Zhou</a><sup>1</sup>,</span>
+                <span class="author-block">
+                    <a href="https://scholar.google.com/citations?hl=en&user=YdiZoJgAAAAJ" target="_blank">Brian R. Bartoldson</a><sup>2</sup>
+                  </span> <br>
+              <span class="author-block">
+                    <a href="https://people.llnl.gov/kailkhura1" target="_blank"> Bhavya Kailkhura</a><sup>2</sup>,
+                  </span>
+              <span class="author-block">
+                    <a href="https://www.fanlai.me/" target="_blank"> Fan Lai</a><sup>3</sup>,
+                  </span>
+              <span class="author-block">
+                    <a href="https://jiawei-zhao.netlify.app/" target="_blank"> Jiawei Zhao</a><sup>4</sup>,
+                  </span>
+              <span class="author-block">
+                <a href="https://www.andrew.cmu.edu/user/beidic/" target="_blank">Beidi Chen</a><sup>1</sup>
+                </span>
+                </div>
+                <div class="is-size-5 publication-authors">
+                <span class="affliation"><small>
+                  <sup>1</sup>Carnegie Mellon University
+                  <sup>2</sup>Lawrence Livermore National Laboratory
+                  <br>
+                  <sup>3</sup>University of Illinois Urbana-Champaign
+                  <sup>4</sup>Meta AI
+                </small></span>
+                <!-- <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span> -->
+                </div>
+
+                <div class="column has-text-centered">
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                    <a href="https://arxiv.org/abs/2404.11912" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                    </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                    <a href="https://github.com/Infini-AI-Lab/GRESO" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                </span>
+
+                <!-- Video Link
+                <span class="link-block">
+                    <a href="https://youtu.be/vRAaAyjr6Jo" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                    </a>
+                </span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TLDR -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <div class="content has-text-justified">
+          <p>
+            <strong style="font-weight: 900;color: #0f598a">TL;DR:</strong>
+            GRESO is a lightweight pre-rollout filter that skips uninformative prompts using reward dynamics, saving RL training time without hurting accuracy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light" style="background-color: #FFFFFC !important;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="text-align: center;">
+          <img src="static/images/introduction.png" style="height: 43px; display: inline; vertical-align: middle;"/>
+           Introduction
+        </h2>
+        <div class="content has-text-justified">
+          <p>
+            Reinforcement learning, such as PPO and GRPO, has powered recent breakthroughs in LLM reasoning.
+            Scaling rollout to sample more prompts enables models to selectively use higher-quality data for training, which can stabilize RL training and improve model performance, but at the cost of significant computational overhead.
+            In this paper, we first show that a substantial portion of this overhead can be avoided by skipping uninformative prompts <em>before rollout</em>.
+            Our analysis of reward dynamics reveals a strong temporal consistency in prompt value: prompts that are uninformative in one epoch of training are likely to remain uninformative in near future epochs.
+            Based on these insights, we propose <strong>GRESO</strong> (<u>GR</u>PO with <u>E</u>fficient <u>S</u>elective R<u>o</u>llout), an online, lightweight pre-rollout filtering algorithm that predicts and skips uninformative prompts using reward training dynamics.
+            By evaluating GRESO on a broad range of math reasoning benchmarks and models, like <i>Qwen2.5-Math-1.5B/7B</i> and <i>DeepSeek-R1-Distill-Qwen-1.5B</i>, we show that GRESO achieves up to
+            <strong>2.4&times; wall-clock time speedup</strong> in rollout and up to
+            <strong>2.0&times; speedup</strong> in total training time without accuracy degradation.
+          </p>
+
+
+          <h3 class="title is-5" > Rollout Scaling: Better Performance with More Rollouts</h3>
+          <div style="display: flex; align-items: top; gap: 10px;">
+              <div style="flex: 1;">
+                  <p>
+                        <em>Scaling computational resources to sample responses for more prompts</em> at this rollout stage can enhance reinforcement learning, which allows models to selectively utilize higher-quality data and thus train models with better converged performance. However, scaling up rollouts introduces significant computational overhead, as rollout remains a major bottleneck in RL training. For instance, as shown in the right figures, filtering out uninformative examples<sup>1</sup> and resampling to fill the batch with effective data,also known as Dynamic Sampling (DS), can improve model performance, but it comes at the cost of significantly increased rollout overhead.
+                      </p>
+
+                      <p>
+                        Motivated by this challenge, we aim to investigate the following research question in this work:
+                      </p>
+
+                      <blockquote style="font-style: italic;">
+                        How can we perform more selective rollouts—focusing on sampling more valuable prompts—to make this scaling more efficient?
+                      </blockquote>
+              </div>
+              <div style="flex: 0 0 30%; max-width: 30%;">
+                  <img src="static/images/rollout-scaling.jpg" alt="rollout-scaling" width=300 />
+              </div>
+          </div>
+          <p style="font-size: 0.9em;"><sup>1</sup> In GRPO, many examples yield identical rewards across all responses, resulting in zero advantage and thus contributing no learning signal during training.</p>
+
+          <h3 class="title is-5" > More Efficient <em>Rollout Scaling</em> with GRESO </h3>
+          <div class="figure">
+              <img src="static/images/scaling-compare.png" alt="Scaling" height="400" />
+          </div>
+          <p>
+            In this paper, we aim to design an efficient selective rollout strategy for LLM RL to make rollout scaling more efficient.
+            We begin by analyzing the training dynamics of prompts across epochs and observe a strong temporal consistency across different training epochs.
+            In particular, prompts that yield zero advantage in one epoch are more likely to do so in future epochs as well.
+            This temporal correlation suggests that historical reward dynamics can be leveraged to predict and preemptively skip zero-variance examples before rollout.
+            Building on these observations, we propose <strong>GRESO</strong> (<u>GR</u>PO with <u>E</u>fficient <u>S</u>elective R<u>o</u>llout), an online efficient pre-rollout filtering algorithm that reduces rollout cost by selectively skipping prompts predicted to be zero-variance.
+            Instead of performing filtering after rollout, GRESO estimates a skipping probability for each prompt based on its reward dynamics during training <u>prior to the rollout stage</u>, significantly reducing prompt selection overhead and making the rollout scaling more efficient.
+          </p>
+
+          <p>
+            As shown in the above figure, compared to the baseline method (Dynamic Sampling), our approach (GRESO) reduces rollout overhead by up to <b>2x</b> while achieving comparable training performance, improving the efficiency of rollout scaling.
+            (We train Qwen2.5-Math-1.5B/7B on the DAPO + MATH dataset and evaluate them on five math reasoning benchmarks: MATH500, AMC, Gaokao, Minerva, and Olympiad Bench.)
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero is-light">
+<!-- <section class="section hero is-light" style="background-color: #FFFFFC !important;"> -->
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3" style="text-align: center;">
+                  <img src="static/images/icon.jpg" style="height: 28px; display: inline; vertical-align: -2px;"/>
+                  GRESO: <u>GR</u>PO with <u>E</u>fficient <u>S</u>elective R<u>o</u>llout
+                </h2>
+                <div class="figure">
+                    <img src="static/images/greso-method.jpg" alt="pipeline" height="400" />
+                </div>
+                <br>
+                <div class="content has-text-justified">
+                  <h3 class="title is-5" > Observation: Temporal Correlation of Prompts across Epochs </h3>
+                  <p>
+                      Training data typically exhibits strong temporal correlations across epochs.
+                      We hypothesize that zero-variance prompts in GRPO training similarly have such strong correlations in their training dynamics, enabling opportunities for more efficient identification of these prompts prior to the rollout stage.
+                      To test this hypothesis, we conduct a study on the temporal correlation of zero-variance prompts in GRPO training.
+                      Specifically, we train Qwen2.5-Math-7B with GRPO and measure two probabilities to study the temporal correlation of zero-variance prompts:
+                      <b>1)</b> <code>P(Previous|Current)</code>: The probability that a prompt identified as zero-variance in the current epoch was also zero-variance in any previous epoch.
+                      <b>2)</b> <code>P(Current|Previous)</code>: The probability that a prompt identified as zero-variance in any previous epoch remains zero-variance in the current epoch.
+                      </p>
+                      <p>
+                      The results shown in the above Figure (a) indicate that zero-variance prompts exhibit strong temporal correlations throughout training.
+                      We have two key observations:
+                      </p>
+                      <ul>
+                        <li><em><b>1)</b> Prompts previously identified as zero-variance are likely to remain zero-variance:</em><br>
+                        The <code>P(Previous|Current)</code> curve shows that the majority of zero-variance prompts in a given epoch (e.g., over 90%) were also identified as zero-variance in earlier epochs.</li>
+                        <li><em><b>2)</b> Some zero-variance prompts can become effective again in future epochs:</em><br>
+                        The <code>P(Current|Previous)</code> curve shows that approximately 20% of prompts previously labeled as zero-variance become effective prompts that contribute to training again. This suggests that, rather than statically pruning zero-variance prompts, it is beneficial to retain some degree of exploration to help retain potentially valuable prompts.</li>
+                      </ul>
+                  <h3 class="title is-5" > GRESO with Probabilistic Pre-rollout Prompt Filtering </h3>
+                  <p>
+                      Based on the above observations, as shown in the above Figure (b),
+                      we propose a probabilistic filtering strategy based on reward dynamics observed during training. Rather than deterministically discarding prompts that previously yielded identical (i.e., zero-variance) rewards, we assign each prompt a probability of being filtered—this probability increases with the number of recent consecutive rollouts where the prompt showed zero-variance. Concretely, for each prompt, we track how many times in a row it has produced zero-variance responses in the most recent epochs. The more consecutive times this occurs, the more likely the prompt will be skipped in the current rollout. However, we always retain a minimum exploration probability, ensuring that even frequently zero-variance prompts have a small chance of being re-sampled. This approach skips uninformative prompts to exploit training efficiency, while occasionally revisiting them to maintain exploration.
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Results Section -->
+<section class="section hero is-light" style="background-color: #FFFFFC !important;">
+<!-- <section class="section hero is-light"> -->
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3" style="text-align: center;"><img src="static/images/exp.jpg" style="height: 35px; display: inline; vertical-align: -5px;"/> Comparable Performance with Fewer Rollouts</h2>
+              <!-- Rollout -->
+              <div class="content has-text-justified">
+                <!-- <br> -->
+                <!-- Up to 2.4$\times$ wall-clock time speed-up in rollout and  2.0$\times$ speed-up in training. -->
+                <h3 class="title is-5" > No performance drop with up to 3.35x fewer rollouts </h3>
+                <div class="figure">
+                  <img src="static/images/table-rollout-comparison.jpg" alt="table-rollout-comparison" height="350" />
+                </div>
+                <p>
+                    To verify the effectiveness of GRESO, we present a comprehensive evaluation of GRESO and Dynamic Sampling (DS), which filters out zero-variance examples and resamples to fill the batch with effective data, across six math reasoning benchmarks, using three different model settings in the above table.
+                    The models are trained on either the DAPO + MATH dataset (DM) or the Open R1 subset (OR1).
+                    We report both the performance and the number of rollouts from the checkpoint that achieves the best average performance across six benchmarks.
+                    Across all training settings, GRESO achieves comparable accuracy as DS, while significantly reducing the number of rollout samples—achieving up to <b>3.35× fewer rollouts</b>.
+                    For example, on Qwen2.5-Math-7B trained on the DM dataset, GRESO achieves a comparable average accuracy to DS (57.5% vs. 57.8%), while reducing the number of rollouts from 13.1M to 6.3M.
+                    These results demonstrate that GRESO maintains performance while substantially lowering the cost on rollouts.
+                    Similar improvements are observed across other evaluation settings.
+                </p>
+              </div>
+
+              <!-- Rollout end -->
+
+              <!-- Wall-clock time -->
+              <div class="content has-text-justified">
+                <h3 class="title is-5" > Up to 2.0x wall-clock time speed-up in training </h3>
+                <div style="display: flex; align-items: top; gap: 10px;">
+                  <div style="flex: 1;">
+                      <p>
+                          To better understand the efficiency of our proposed methods, we report the detailed end-to-end training time breakdown for different stages: rollout, actor model update, and other overheads (e.g., reference model and advantage calculation).
+                          Qwen2.5-Math-1.5B is trained on 4×H100 GPUs, while the other two models are trained on 8×H100 GPUs.
+                          The right table compares the training time breakdown between GRESO and Dynamic Sampling for models trained on the DAPO + MATH dataset.
+                          For all three models, GRESO significantly reduces rollout time—achieving up to <b>2.4× speedup</b> in rollout and <b>2.0× speedup</b> in total training time compared to DS.
+                          For instance, on Qwen2.5-Math-7B, GRESO reduces rollout time from 155.9 hours to 65.5 hours, cutting overall training time from 178.0 to 88.3 hours.
+                          </p>
+                  </div>
+                  <div style="flex: 0 0 45%; max-width: 45%;">
+                      <img src="static/images/table-wall-clock-time.jpg" alt="rollout-scaling" width=450 />
+                  </div>
+                </div>
+              </div>
+              <!-- Wall-clock time end -->
+
+              <!-- Case study -->
+              <div class="content has-text-justified">
+                <!-- <br> -->
+                <h3 class="title is-5" > Case Study: Selection Dynamics </h3>
+                <div style="display: flex; align-items: top; gap: 10px;">
+                  <div style="flex: 1;">
+                      <p>
+                         Selection Dynamics of different prompts in GRESO. Each row is a prompt, and each column is an epoch.
+
+                         We present a case study illustrating how GRESO selects or skips prompts over training epochs. We observe that very easy prompts tend to remain easy throughout training; although frequently skipped, GRESO still occasionally selects them to ensure a minimal level of exploration. For prompts of moderate difficulty, as the model becomes stronger over time, these prompts gradually become easier and are increasingly skipped. In contrast, some hard prompts become solvable~(i.e., effective prompts) in later epochs or even easy prompts. However, certain hard prompts remain unsolved throughout training.
+                      </p>
+                  </div>
+                  <div style="flex: 0 0 30%; max-width: 30%;">
+                      <img src="static/images/case-study.jpg" alt="rollout-scaling" width=350 />
+                  </div>
+                </div>
+              </div>
+              <!-- Case study end -->
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--BibTex citation -->
+<section class="section" id="BibTeX"  style="background-color: #f5f5f5 !important;">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre style="background-color: #FFFFFC !important;"><code >@article{zheng2025greso,
+    title={Act Only When It Pays: Efficient Reinforcement Learning for LLM Reasoning via Selective Rollouts},
+    author = {Zheng, Haizhong and Zhou, Yang and Bartoldson, Brian R. and Kailkhura, Bhavya and Lai, Fan and Zhao, Jiawei and Chen, Beidi},
+    journal={arXiv preprint arXiv:2404.11912},
+    year={2025}
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<!-- <section class="section hero is-light" style="background-color: #f5f5f5 !important;"></section> -->
+<footer class="footer"  style="background-color: #f5f5f5 !important;">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>. The icons are created by GPT4.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
