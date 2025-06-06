@@ -27,7 +27,7 @@ We propose GRESO, a lightweight pre-rollout filtering method that improves the e
 ## 🗞️ News
 
 - **[2025.06.03]** Blog post released: [Act Only When It Pays – GRESO](https://infini-ai-lab.github.io/GRESO/)
-- **[2025.06.03]** Paper preprint available on [arXiv]()
+- **[2025.06.03]** Paper preprint available on [arXiv](https://arxiv.org/abs/2506.02177)
 
 <!-- ---------- -->
 <p align="center">
