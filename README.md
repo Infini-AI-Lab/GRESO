@@ -52,21 +52,13 @@ Our implementation is based on [volcengine/verl](https://github.com/volcengine/v
 conda create -n greso python==3.11
 conda activate greso
 
-# Install verl
-# exit the project folder to install verl
-cd ..
-git clone https://github.com/volcengine/verl.git
-cd verl
 pip3 install -e .
-
-# Install the latest stable version of vLLM
 pip3 install vllm==0.8.2
+pip install tensordict==0.6.0
+pip install flash-attn==2.7.4.post1 --no-build-isolation
 
-# Install flash-attn
-pip3 install flash-attn --no-build-isolation
-
-## misc
 pip install wandb IPython matplotlib ipdb latex2sympy2-extended math-verify torchdata pylatexenc
+
 ```
 
 ### 2. Download & Preprocess Data
