@@ -24,8 +24,11 @@ We propose GRESO, a lightweight pre-rollout filtering method that improves the e
 
 
 
+> 🚀 GRESO has now been included in [AstraFlow](https://github.com/Infini-AI-Lab/astraflow)! Try it [here](https://github.com/Infini-AI-Lab/astraflow/tree/main/examples/math-efficient-data).
+
 ## 🗞️ News
 
+- **[2026.06.08]** GRESO has been included in [AstraFlow](https://github.com/Infini-AI-Lab/astraflow).
 - **[2025.06.03]** Blog post released: [Act Only When It Pays – GRESO](https://infini-ai-lab.github.io/GRESO/).
 - **[2025.06.03]** Paper preprint available on [arXiv](https://arxiv.org/abs/2506.02177).
 
